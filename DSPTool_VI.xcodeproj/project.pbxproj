@@ -84,8 +84,6 @@
 		DC18DCE728626B77009545FB /* measuringtape2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = measuringtape2.mp3; path = ../../../../AudioClips/measuringtape2.mp3; sourceTree = "<group>"; };
 		DC18DCE928626B8B009545FB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		DC18DD2028628549009545FB /* Template.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Template.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC18DD2328628549009545FB /* TemplateAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemplateAudioUnit.h; sourceTree = "<group>"; };
-		DC18DD2428628549009545FB /* TemplateAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemplateAudioUnit.m; sourceTree = "<group>"; };
 		DC18DD2828628549009545FB /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
 		DC18DD2A28628549009545FB /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
 		DC18DD2C28628549009545FB /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
@@ -177,8 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				DC18DD57286286A6009545FB /* SwiftTemplateAudioUnit.swift */,
-				DC18DD2328628549009545FB /* TemplateAudioUnit.h */,
-				DC18DD2428628549009545FB /* TemplateAudioUnit.m */,
 			);
 			name = "Audio Unit";
 			path = "AUFramework/Audio Unit";
