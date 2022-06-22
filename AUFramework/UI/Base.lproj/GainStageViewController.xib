@@ -13,45 +13,35 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <view id="rt4-mF-UHZ">
-            <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+        <view wantsLayer="YES" id="rt4-mF-UHZ">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
-                    <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                <customView wantsLayer="YES" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" id="c22-O7-iKe">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58O-pY-g9s">
-                            <rect key="frame" x="388" y="202" width="24" height="107"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <slider horizontalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58O-pY-g9s">
+                            <rect key="frame" x="63" y="16" width="24" height="107"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="58O-pY-g9s" secondAttribute="height" multiplier="20:99" id="OcG-91-hjg"/>
+                            </constraints>
                             <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-4" maxValue="2" tickMarkPosition="right" sliderType="linear" id="dIl-NN-HHZ"/>
                             <connections>
                                 <action selector="sliderUpdated:" target="-2" id="GIq-RR-Okc"/>
                             </connections>
                         </slider>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PKN-UP-9Sb">
-                            <rect key="frame" x="275" y="471" width="250" height="21"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Your AudioUnit UI goes here!" id="3Nv-6R-78a">
-                                <font key="font" metaFont="systemBold" size="18"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="T2C-8u-WUg"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="800" id="d58-A3-fGA"/>
-                        <constraint firstItem="PKN-UP-9Sb" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="hLY-4J-KcR"/>
-                        <constraint firstItem="PKN-UP-9Sb" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="jvi-yD-1Qe"/>
+                        <constraint firstAttribute="width" constant="150" id="7FT-7R-Isj"/>
+                        <constraint firstAttribute="height" constant="150" id="Kz2-Ce-fza"/>
                     </constraints>
                 </customView>
             </subviews>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="c22-O7-iKe" secondAttribute="bottom" id="NKq-dC-1AP"/>
-                <constraint firstItem="c22-O7-iKe" firstAttribute="leading" secondItem="rt4-mF-UHZ" secondAttribute="leading" id="Xs9-WT-Nhd"/>
-                <constraint firstItem="c22-O7-iKe" firstAttribute="top" secondItem="rt4-mF-UHZ" secondAttribute="top" id="hS4-Dd-6Qf"/>
-                <constraint firstAttribute="trailing" secondItem="c22-O7-iKe" secondAttribute="trailing" id="tAx-qv-lDn"/>
-            </constraints>
-            <point key="canvasLocation" x="358" y="-190"/>
+            <shadow key="shadow">
+                <color key="color" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+            </shadow>
+            <point key="canvasLocation" x="151" y="-1168"/>
         </view>
     </objects>
 </document>

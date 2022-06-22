@@ -41,10 +41,10 @@ public class GainStageViewController: AUViewController, AUAudioUnitFactory {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
         connectViewToAU()
     }
     
+
     private func connectViewToAU() {
         // grab reference to parameter tree
         guard let paramTree = audioUnit?.parameterTree else { return }
@@ -64,7 +64,7 @@ public class GainStageViewController: AUViewController, AUAudioUnitFactory {
     }
     
     @IBAction func sliderUpdated(_ sender: NSSlider) {
-        gain.value = AUValue(sender.floatValue)
+        //gain.value = AUValue(sender.floatValue)
         print(sender.floatValue)
     }
 }
