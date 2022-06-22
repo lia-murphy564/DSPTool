@@ -5,8 +5,8 @@
 //  Created by Amelia Murphy on 6/21/22.
 //
 
-#ifndef BridgingHeader_h
-#define BridgingHeader_h
+#ifndef Bridging-Header_hpp
+#define Bridging-Header_hpp
 
 #import "DSP/TemplateDSPKernelAdapter.h"
 

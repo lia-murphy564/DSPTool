@@ -14,5 +14,7 @@ FOUNDATION_EXPORT double AUFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char AUFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AUFramework/PublicHeader.h>
-//#import <AUFramework/DSP/TemplateDSPKernelAdapter>
-#import <AUFramework/TemplateAudioUnit.h>
+
+#import "TemplateDSPKernelAdapter.h"
+#import "GainStageDSPKernelAdapter.h"
+

@@ -14,13 +14,13 @@
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>Gain</string>
+					<string>Demo</string>
 					<key>name</key>
-					<string>Gain: GainStage</string>
+					<string>Demo: GainStage</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>Gain</string>
+					<string>Demo</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>

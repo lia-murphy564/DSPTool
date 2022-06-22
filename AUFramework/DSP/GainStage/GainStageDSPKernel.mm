@@ -25,7 +25,7 @@
         
         // Create a DSP kernel to handle the signal processing.
         _kernel.init(format.channelCount, format.sampleRate);
-        _kernel.setParameter(paramOne, 0);
+        _kernel.setParameter(gain, 0);
 
         // Create the input and output busses.
         _inputBus.init(format, 8);

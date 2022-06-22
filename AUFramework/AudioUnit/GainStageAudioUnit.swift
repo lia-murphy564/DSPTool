@@ -1,5 +1,5 @@
 //
-//  SwiftTemplateAudioUnit.swift
+//  GainStageAudioUnit.swift
 //  AUFramework
 //
 //  Created by Amelia Murphy on 6/21/22.
@@ -11,17 +11,13 @@ import AudioToolbox
 import AVFoundation
 import CoreAudio
 
-public class TemplateAudioUnit: AUAudioUnit {
+public class GainStageAudioUnit: AUAudioUnit {
 
     // parameter declarations
-    private let param1: AUParameter
-    
-
-    // parameter tree declaratiozzn
-    //public let parameterTree: AUParameterTree?
+    private let gain: AUParameter
 
     // dsp kernel adapter
-    private let kernelAdapter: TemplateDSPKernelAdapter
+    private let kernelAdapter: GainStageDSPKernelAdapter
 
     lazy private var inputBusArray: AUAudioUnitBusArray = {
         AUAudioUnitBusArray(audioUnit: self,
@@ -36,7 +32,7 @@ public class TemplateAudioUnit: AUAudioUnit {
     }()
 
     // owning view controller
-    weak var viewController: TemplateAudioUnitViewController?
+    weak var viewController: GainStageViewController?
 
     // input busses
     public override var inputBusses: AUAudioUnitBusArray { return inputBusArray }
@@ -44,64 +40,18 @@ public class TemplateAudioUnit: AUAudioUnit {
     // output busses
     public override var outputBusses: AUAudioUnitBusArray { return inputBusArray }
 
-
-    public override var factoryPresets: [AUAudioUnitPreset] {
-        return [
-            AUAudioUnitPreset(number: 0, name: "Default")
-        ]
-    }
-    /*
-    private let factoryPresetValues:[(cutoff: AUValue, resonance: AUValue)] = [
-        (2500.0, 5.0),    // "Prominent"
-        (14_000.0, 12.0), // "Bright"
-        (384.0, -3.0)     // "Warm"
-    ]
-
-    private var _currentPreset: AUAudioUnitPreset?
-
-    public override var currentPreset: AUAudioUnitPreset? {
-        get { return _currentPreset }
-        set {
-            // If the newValue is nil, return.
-            guard let preset = newValue else {
-                _currentPreset = nil
-                return
-            }
-
-            // Factory presets need to always have a number >= 0.
-            if preset.number >= 0 {
-                let values = factoryPresetValues[preset.number]
-                parameters.setParameterValues(cutoff: values.cutoff, resonance: values.resonance)
-                _currentPreset = preset
-            }
-            // User presets are always negative.
-            else {
-                // Attempt to restore the archived state for this user preset.
-                do {
-                    fullStateForDocument = try presetState(for: preset)
-                    // Set the currentPreset after successfully restoring the state.
-                    _currentPreset = preset
-                } catch {
-                    print("Unable to restore set for preset \(preset.name)")
-                }
-            }
-        }
-    }
-     */
-
     // can the audio unit support user presets?
     public override var supportsUserPresets: Bool {
-        return true
+        return false
     }
 
     public override init(componentDescription: AudioComponentDescription, options: AudioComponentInstantiationOptions = []) throws {
         // kernel adapter communicates with c++ dsp code
-        kernelAdapter = TemplateDSPKernelAdapter()
+        kernelAdapter = GainStageDSPKernelAdapter()
 
-
-        // declare parameters in parameterTree
-        param1 = AUParameterTree.createParameter(withIdentifier: "param1",
-                                                 name: "Param 1",
+        // declare parameters in parameterTrees
+        gain = AUParameterTree.createParameter(withIdentifier: "gain",
+                                                 name: "Gain",
                                                  address: 0,
                                                  min: 0,
                                                  max: 1,
@@ -114,13 +64,13 @@ public class TemplateAudioUnit: AUAudioUnit {
 
 
         // init parameter values
-        param1.value = 0.5
+        gain.value = 1
 
         // init super class
         try super.init(componentDescription: componentDescription, options: options)
 
         // Create the audio unit's tree of parameters.
-        parameterTree = AUParameterTree.createTree(withChildren: [self.param1])
+        parameterTree = AUParameterTree.createTree(withChildren: [self.gain])
 
         // A closure for observing all externally generated parameter value changes.
         parameterTree?.implementorValueObserver = { param, value in
@@ -143,9 +93,6 @@ public class TemplateAudioUnit: AUAudioUnit {
 //                return "?"
 //            }
 //        }
-
-        // set default preset
-        currentPreset = factoryPresets.first
     }
 
     public override var maximumFramesToRender: AUAudioFrameCount {

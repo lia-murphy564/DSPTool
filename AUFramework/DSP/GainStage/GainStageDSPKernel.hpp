@@ -11,7 +11,7 @@
 #import "DSPKernel.hpp"
 
 enum {
-    paramOne = 0,
+    gain = 0,
 };
 
 /*
@@ -44,17 +44,17 @@ public:
 
     void setParameter(AUParameterAddress address, AUValue value) {
         switch (address) {
-            case paramOne:
-
+            case gain:
+                gain_dB = value;
                 break;
         }
     }
 
     AUValue getParameter(AUParameterAddress address) {
         switch (address) {
-            case paramOne:
+            case gain:
                 // Return the goal. It is not thread safe to return the ramping value.
-                return 0.f;
+                return gain_dB;
 
             default: return 0.f;
         }
@@ -94,7 +94,7 @@ public:
                 const int frameOffset = int(frameIndex + bufferOffset);
                 
                 // Do your sample by sample dsp here...
-                out[frameOffset] = in[frameOffset];
+                out[frameOffset] = in[frameOffset] * gain_dB;
             }
         }
     }
@@ -107,6 +107,8 @@ private:
     bool bypassed = false;
     AudioBufferList* inBufferListPtr = nullptr;
     AudioBufferList* outBufferListPtr = nullptr;
+    
+    float gain_dB;
 };
 
 #endif /* GainStageDSPKernel_hpp */

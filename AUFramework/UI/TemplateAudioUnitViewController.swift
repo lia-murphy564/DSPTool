@@ -21,7 +21,7 @@ public class TemplateAudioUnitViewController: AUViewController, AUAudioUnitFacto
     }
     
     public func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
-        audioUnit = try SwiftTemplateAudioUnit(componentDescription: componentDescription, options: [])
+        audioUnit = try TemplateAudioUnit(componentDescription: componentDescription, options: [])
         
         return audioUnit!
     }

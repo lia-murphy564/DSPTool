@@ -7,7 +7,7 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 
-@class AudioUnitViewController;
+@class GainStageViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 

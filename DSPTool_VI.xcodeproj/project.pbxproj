@@ -7,28 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0DFCED2862993C0021DC1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD728626B5E009545FB /* ViewController.swift */; };
 		DC18DCD628626B5E009545FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD528626B5E009545FB /* AppDelegate.swift */; };
-		DC18DCD828626B5E009545FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD728626B5E009545FB /* ViewController.swift */; };
 		DC18DCDB28626B5E009545FB /* DSPTool_VI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD928626B5E009545FB /* DSPTool_VI.xcdatamodeld */; };
 		DC18DCDD28626B60009545FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC18DCDC28626B60009545FB /* Assets.xcassets */; };
 		DC18DCE028626B60009545FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC18DCDE28626B60009545FB /* Main.storyboard */; };
 		DC18DCE828626B77009545FB /* measuringtape2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC18DCE728626B77009545FB /* measuringtape2.mp3 */; };
 		DC18DCEA28626B8B009545FB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCE928626B8B009545FB /* AudioPlayer.swift */; };
-		DC18DD3028628549009545FB /* TemplateDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */; };
-		DC18DD3928628549009545FB /* TemplateAudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */; };
 		DC18DD3E28628549009545FB /* Template.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC18DD2028628549009545FB /* Template.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DC18DD4A286285D8009545FB /* AUFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD49286285D8009545FB /* AUFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC18DD4D286285D8009545FB /* AUFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC18DD47286285D8009545FB /* AUFramework.framework */; };
 		DC18DD4E286285D8009545FB /* AUFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC18DD47286285D8009545FB /* AUFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC18DD5628628680009545FB /* TemplateAudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */; };
-		DC18DD5A28628717009545FB /* TemplateDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD3128628549009545FB /* TemplateDSPKernel.mm */; };
-		DCDF678A28628982009509D2 /* TemplateDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCDF678F28628AE8009509D2 /* TemplateDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDF678E28628AE8009509D2 /* TemplateDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCDF679128628B7F009509D2 /* SwiftTemplateAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD57286286A6009545FB /* SwiftTemplateAudioUnit.swift */; };
+		DC89E97B28629B0100A529D7 /* TemplateAudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */; };
+		DC89E98028629C4100A529D7 /* TemplateDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */; };
+		DC89E98628629E2B00A529D7 /* TemplateAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD57286286A6009545FB /* TemplateAudioUnit.swift */; };
+		DC89E9AD28629FD200A529D7 /* TemplateDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDF678E28628AE8009509D2 /* TemplateDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC89E9AE2862A05B00A529D7 /* TemplateDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD3128628549009545FB /* TemplateDSPKernel.mm */; };
+		DC89E9D62862A2F800A529D7 /* GainStageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC89E9D42862A2F800A529D7 /* GainStageViewController.xib */; };
+		DC89E9DB2862A2F800A529D7 /* GainStage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC89E9BD2862A2F800A529D7 /* GainStage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC89E9DF2862A33200A529D7 /* GainStageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89E9D12862A2F800A529D7 /* GainStageViewController.swift */; };
+		DC89E9E02862A33D00A529D7 /* GainStageDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC89E9CE2862A2F800A529D7 /* GainStageDSPKernel.mm */; };
+		DC89E9E32862A37600A529D7 /* GainStageAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89E9E22862A37600A529D7 /* GainStageAudioUnit.swift */; };
+		DC89E9E42862A3AC00A529D7 /* GainStageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC89E9D42862A2F800A529D7 /* GainStageViewController.xib */; };
+		DC89E9E62862A3E700A529D7 /* GainStageDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC89E9CB2862A2F800A529D7 /* GainStageDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC89E9E82862A47E00A529D7 /* AUAudioUnitPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89E9E72862A47E00A529D7 /* AUAudioUnitPreset.swift */; };
 		DCDF679228628B81009509D2 /* TemplateAudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD3428628549009545FB /* TemplateAudioUnitViewController.swift */; };
 		DCDF679528628BE6009509D2 /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD2A28628549009545FB /* DSPKernel.mm */; };
-		DCDF679628628BE9009509D2 /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2828628549009545FB /* DSPKernel.hpp */; };
-		DCDF679728628BED009509D2 /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2C28628549009545FB /* BufferedAudioBus.hpp */; };
+		DCDF679628628BE9009509D2 /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2828628549009545FB /* DSPKernel.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCDF679728628BED009509D2 /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2C28628549009545FB /* BufferedAudioBus.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 			remoteGlobalIDString = DC18DD46286285D8009545FB;
 			remoteInfo = AUFramework;
 		};
+		DC89E9D92862A2F800A529D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC18DCCA28626B5E009545FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC89E9BC2862A2F800A529D7;
+			remoteInfo = GainStage;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				DC89E9DB2862A2F800A529D7 /* GainStage.appex in Embed App Extensions */,
 				DC18DD3E28628549009545FB /* Template.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -90,13 +105,22 @@
 		DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TemplateDSPKernel.hpp; sourceTree = "<group>"; };
 		DC18DD3128628549009545FB /* TemplateDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TemplateDSPKernel.mm; sourceTree = "<group>"; };
 		DC18DD3428628549009545FB /* TemplateAudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAudioUnitViewController.swift; sourceTree = "<group>"; };
-		DC18DD3628628549009545FB /* Template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Template-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC18DD3828628549009545FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TemplateAudioUnitViewController.xib; sourceTree = "<group>"; };
 		DC18DD3A28628549009545FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC18DD3B28628549009545FB /* Template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Template.entitlements; sourceTree = "<group>"; };
 		DC18DD47286285D8009545FB /* AUFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AUFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC18DD49286285D8009545FB /* AUFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUFramework.h; sourceTree = "<group>"; };
-		DC18DD57286286A6009545FB /* SwiftTemplateAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTemplateAudioUnit.swift; sourceTree = "<group>"; };
+		DC18DD57286286A6009545FB /* TemplateAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAudioUnit.swift; sourceTree = "<group>"; };
+		DC89E9BD2862A2F800A529D7 /* GainStage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GainStage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC89E9CB2862A2F800A529D7 /* GainStageDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GainStageDSPKernelAdapter.h; sourceTree = "<group>"; };
+		DC89E9CC2862A2F800A529D7 /* GainStageDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GainStageDSPKernel.hpp; sourceTree = "<group>"; };
+		DC89E9CE2862A2F800A529D7 /* GainStageDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GainStageDSPKernel.mm; sourceTree = "<group>"; };
+		DC89E9D12862A2F800A529D7 /* GainStageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainStageViewController.swift; sourceTree = "<group>"; };
+		DC89E9D52862A2F800A529D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GainStageViewController.xib; sourceTree = "<group>"; };
+		DC89E9D72862A2F800A529D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC89E9D82862A2F800A529D7 /* GainStage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GainStage.entitlements; sourceTree = "<group>"; };
+		DC89E9E22862A37600A529D7 /* GainStageAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainStageAudioUnit.swift; sourceTree = "<group>"; };
+		DC89E9E72862A47E00A529D7 /* AUAudioUnitPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AUAudioUnitPreset.swift; path = AUFramework/Helpers/AUAudioUnitPreset.swift; sourceTree = SOURCE_ROOT; };
 		DCDF678E28628AE8009509D2 /* TemplateDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemplateDSPKernelAdapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,14 +147,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC89E9BA2862A2F800A529D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DC18DCC928626B5E009545FB = {
 			isa = PBXGroup;
 			children = (
-				DC18DCD428626B5E009545FB /* DSPTool_VI */,
+				DC89E9BE2862A2F800A529D7 /* GainStage */,
 				DC18DD2128628549009545FB /* Template */,
+				DC18DCD428626B5E009545FB /* DSPTool_VI */,
 				DC18DD48286285D8009545FB /* AUFramework */,
 				DC18DCD328626B5E009545FB /* Products */,
 			);
@@ -142,6 +174,7 @@
 				DC18DCD228626B5E009545FB /* DSPTool_VI.app */,
 				DC18DD2028628549009545FB /* Template.appex */,
 				DC18DD47286285D8009545FB /* AUFramework.framework */,
+				DC89E9BD2862A2F800A529D7 /* GainStage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,12 +184,12 @@
 			children = (
 				DC18DCD528626B5E009545FB /* AppDelegate.swift */,
 				DC18DCD728626B5E009545FB /* ViewController.swift */,
+				DC18DCE928626B8B009545FB /* AudioPlayer.swift */,
 				DC18DCDC28626B60009545FB /* Assets.xcassets */,
 				DC18DCDE28626B60009545FB /* Main.storyboard */,
 				DC18DCE128626B60009545FB /* DSPTool_VI.entitlements */,
 				DC18DCD928626B5E009545FB /* DSPTool_VI.xcdatamodeld */,
 				DC18DCE728626B77009545FB /* measuringtape2.mp3 */,
-				DC18DCE928626B8B009545FB /* AudioPlayer.swift */,
 			);
 			path = DSPTool_VI;
 			sourceTree = "<group>";
@@ -164,28 +197,27 @@
 		DC18DD2128628549009545FB /* Template */ = {
 			isa = PBXGroup;
 			children = (
-				DC18DD3628628549009545FB /* Template-Bridging-Header.h */,
 				DC18DD3A28628549009545FB /* Info.plist */,
 				DC18DD3B28628549009545FB /* Template.entitlements */,
 			);
 			path = Template;
 			sourceTree = "<group>";
 		};
-		DC18DD2228628549009545FB /* Audio Unit */ = {
+		DC18DD2228628549009545FB /* AudioUnit */ = {
 			isa = PBXGroup;
 			children = (
-				DC18DD57286286A6009545FB /* SwiftTemplateAudioUnit.swift */,
+				DC18DD57286286A6009545FB /* TemplateAudioUnit.swift */,
+				DC89E9E22862A37600A529D7 /* GainStageAudioUnit.swift */,
 			);
-			name = "Audio Unit";
-			path = "AUFramework/Audio Unit";
+			name = AudioUnit;
+			path = AUFramework/AudioUnit;
 			sourceTree = SOURCE_ROOT;
 		};
 		DC18DD2628628549009545FB /* DSP */ = {
 			isa = PBXGroup;
 			children = (
-				DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */,
-				DC18DD3128628549009545FB /* TemplateDSPKernel.mm */,
-				DCDF678E28628AE8009509D2 /* TemplateDSPKernelAdapter.h */,
+				DC89E9E52862A3B800A529D7 /* GainStage */,
+				DC89E9E12862A34A00A529D7 /* Template */,
 			);
 			name = DSP;
 			path = AUFramework/DSP;
@@ -196,6 +228,8 @@
 			children = (
 				DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */,
 				DC18DD3428628549009545FB /* TemplateAudioUnitViewController.swift */,
+				DC89E9D42862A2F800A529D7 /* GainStageViewController.xib */,
+				DC89E9D12862A2F800A529D7 /* GainStageViewController.swift */,
 			);
 			name = UI;
 			path = AUFramework/UI;
@@ -206,7 +240,7 @@
 			children = (
 				DC18DD49286285D8009545FB /* AUFramework.h */,
 				DC18DD552862865A009545FB /* Helpers */,
-				DC18DD2228628549009545FB /* Audio Unit */,
+				DC18DD2228628549009545FB /* AudioUnit */,
 				DC18DD2628628549009545FB /* DSP */,
 				DC18DD3328628549009545FB /* UI */,
 			);
@@ -219,10 +253,40 @@
 				DC18DD2828628549009545FB /* DSPKernel.hpp */,
 				DC18DD2A28628549009545FB /* DSPKernel.mm */,
 				DC18DD2C28628549009545FB /* BufferedAudioBus.hpp */,
+				DC89E9E72862A47E00A529D7 /* AUAudioUnitPreset.swift */,
 			);
 			name = Helpers;
 			path = AUFramework/Helpers;
 			sourceTree = SOURCE_ROOT;
+		};
+		DC89E9BE2862A2F800A529D7 /* GainStage */ = {
+			isa = PBXGroup;
+			children = (
+				DC89E9D72862A2F800A529D7 /* Info.plist */,
+				DC89E9D82862A2F800A529D7 /* GainStage.entitlements */,
+			);
+			path = GainStage;
+			sourceTree = "<group>";
+		};
+		DC89E9E12862A34A00A529D7 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */,
+				DC18DD3128628549009545FB /* TemplateDSPKernel.mm */,
+				DCDF678E28628AE8009509D2 /* TemplateDSPKernelAdapter.h */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		DC89E9E52862A3B800A529D7 /* GainStage */ = {
+			isa = PBXGroup;
+			children = (
+				DC89E9CC2862A2F800A529D7 /* GainStageDSPKernel.hpp */,
+				DC89E9CE2862A2F800A529D7 /* GainStageDSPKernel.mm */,
+				DC89E9CB2862A2F800A529D7 /* GainStageDSPKernelAdapter.h */,
+			);
+			path = GainStage;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -233,9 +297,10 @@
 			files = (
 				DC18DD4A286285D8009545FB /* AUFramework.h in Headers */,
 				DCDF679628628BE9009509D2 /* DSPKernel.hpp in Headers */,
-				DCDF678F28628AE8009509D2 /* TemplateDSPKernelAdapter.h in Headers */,
-				DCDF678A28628982009509D2 /* TemplateDSPKernel.hpp in Headers */,
 				DCDF679728628BED009509D2 /* BufferedAudioBus.hpp in Headers */,
+				DC89E9AD28629FD200A529D7 /* TemplateDSPKernelAdapter.h in Headers */,
+				DC89E98028629C4100A529D7 /* TemplateDSPKernel.hpp in Headers */,
+				DC89E9E62862A3E700A529D7 /* GainStageDSPKernelAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +322,7 @@
 			dependencies = (
 				DC18DD3D28628549009545FB /* PBXTargetDependency */,
 				DC18DD4C286285D8009545FB /* PBXTargetDependency */,
+				DC89E9DA2862A2F800A529D7 /* PBXTargetDependency */,
 			);
 			name = DSPTool_VI;
 			productName = DSPTool_VI;
@@ -298,6 +364,23 @@
 			productReference = DC18DD47286285D8009545FB /* AUFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DC89E9BC2862A2F800A529D7 /* GainStage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC89E9DC2862A2F800A529D7 /* Build configuration list for PBXNativeTarget "GainStage" */;
+			buildPhases = (
+				DC89E9B92862A2F800A529D7 /* Sources */,
+				DC89E9BA2862A2F800A529D7 /* Frameworks */,
+				DC89E9BB2862A2F800A529D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GainStage;
+			productName = GainStage;
+			productReference = DC89E9BD2862A2F800A529D7 /* GainStage.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -318,6 +401,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						LastSwiftMigration = 1320;
 					};
+					DC89E9BC2862A2F800A529D7 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = DC18DCCD28626B5E009545FB /* Build configuration list for PBXProject "DSPTool_VI" */;
@@ -336,6 +422,7 @@
 				DC18DCD128626B5E009545FB /* DSPTool_VI */,
 				DC18DD1F28628549009545FB /* Template */,
 				DC18DD46286285D8009545FB /* AUFramework */,
+				DC89E9BC2862A2F800A529D7 /* GainStage */,
 			);
 		};
 /* End PBXProject section */
@@ -355,8 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC18DD3928628549009545FB /* TemplateAudioUnitViewController.xib in Resources */,
-				DC18DD3028628549009545FB /* TemplateDSPKernel.hpp in Resources */,
+				DC89E97B28629B0100A529D7 /* TemplateAudioUnitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +450,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC89E9E42862A3AC00A529D7 /* GainStageViewController.xib in Resources */,
 				DC18DD5628628680009545FB /* TemplateAudioUnitViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC89E9BB2862A2F800A529D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC89E9D62862A2F800A529D7 /* GainStageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC18DCD828626B5E009545FB /* ViewController.swift in Sources */,
+				DC0DFCED2862993C0021DC1D /* ViewController.swift in Sources */,
 				DC18DCD628626B5E009545FB /* AppDelegate.swift in Sources */,
 				DC18DCDB28626B5E009545FB /* DSPTool_VI.xcdatamodeld in Sources */,
 				DC18DCEA28626B8B009545FB /* AudioPlayer.swift in Sources */,
@@ -393,10 +488,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC18DD5A28628717009545FB /* TemplateDSPKernel.mm in Sources */,
-				DCDF679128628B7F009509D2 /* SwiftTemplateAudioUnit.swift in Sources */,
+				DC89E9E32862A37600A529D7 /* GainStageAudioUnit.swift in Sources */,
+				DC89E9DF2862A33200A529D7 /* GainStageViewController.swift in Sources */,
+				DC89E9AE2862A05B00A529D7 /* TemplateDSPKernel.mm in Sources */,
+				DC89E9E02862A33D00A529D7 /* GainStageDSPKernel.mm in Sources */,
+				DC89E98628629E2B00A529D7 /* TemplateAudioUnit.swift in Sources */,
+				DC89E9E82862A47E00A529D7 /* AUAudioUnitPreset.swift in Sources */,
 				DCDF679228628B81009509D2 /* TemplateAudioUnitViewController.swift in Sources */,
 				DCDF679528628BE6009509D2 /* DSPKernel.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC89E9B92862A2F800A529D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +518,11 @@
 			isa = PBXTargetDependency;
 			target = DC18DD46286285D8009545FB /* AUFramework */;
 			targetProxy = DC18DD4B286285D8009545FB /* PBXContainerItemProxy */;
+		};
+		DC89E9DA2862A2F800A529D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC89E9BC2862A2F800A529D7 /* GainStage */;
+			targetProxy = DC89E9D92862A2F800A529D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -430,6 +541,14 @@
 				DC18DD3828628549009545FB /* Base */,
 			);
 			name = TemplateAudioUnitViewController.xib;
+			sourceTree = "<group>";
+		};
+		DC89E9D42862A2F800A529D7 /* GainStageViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC89E9D52862A2F800A529D7 /* Base */,
+			);
+			name = GainStageViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -470,6 +589,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -531,6 +651,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -723,6 +844,60 @@
 			};
 			name = Release;
 		};
+		DC89E9DD2862A2F800A529D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GainStage/GainStage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJJVQ9A5BY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GainStage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GainStage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lmm.DSPTool-VI.GainStage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GainStage/GainStage-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DC89E9DE2862A2F800A529D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GainStage/GainStage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJJVQ9A5BY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GainStage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GainStage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lmm.DSPTool-VI.GainStage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GainStage/GainStage-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -758,6 +933,15 @@
 			buildConfigurations = (
 				DC18DD50286285D8009545FB /* Debug */,
 				DC18DD51286285D8009545FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC89E9DC2862A2F800A529D7 /* Build configuration list for PBXNativeTarget "GainStage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC89E9DD2862A2F800A529D7 /* Debug */,
+				DC89E9DE2862A2F800A529D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

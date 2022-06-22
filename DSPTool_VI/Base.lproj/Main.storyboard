@@ -709,18 +709,9 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYH-wC-LoL">
-                                <rect key="frame" x="133" y="60" width="225" height="150"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <connections>
-                                    <segue destination="bAl-aq-aIA" kind="embed" id="a56-Pp-4zy"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
                     </view>
                     <connections>
-                        <outlet property="auContainer" destination="vYH-wC-LoL" id="LrR-Hy-nKI"/>
+                        <outlet property="auContainer" destination="m2S-Jp-Qdl" id="6bT-DP-txy"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
