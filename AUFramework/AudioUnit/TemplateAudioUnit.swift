@@ -19,9 +19,7 @@ fileprivate extension AUAudioUnitPreset {
     }
 }
 
-// working now
-
-public class SwiftTemplateAudioUnit: AUAudioUnit {
+public class TemplateAudioUnit: AUAudioUnit {
 
     // parameter declarations
     private let param1: AUParameter

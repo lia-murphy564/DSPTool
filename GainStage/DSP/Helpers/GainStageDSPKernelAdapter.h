@@ -1,17 +1,17 @@
 //
-//  TemplateDSPKernelAdapter.h
-//  Template
+//  GainStageDSPKernelAdapter.h
+//  GainStage
 //
 //  Created by Amelia Murphy on 6/21/22.
 //
 
 #import <AudioToolbox/AudioToolbox.h>
 
-@class TemplateAudioUnitViewController;
+@class AudioUnitViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TemplateDSPKernelAdapter : NSObject
+@interface GainStageDSPKernelAdapter : NSObject
 
 @property (nonatomic) AUAudioFrameCount maximumFramesToRender;
 @property (nonatomic, readonly) AUAudioUnitBus *inputBus;
