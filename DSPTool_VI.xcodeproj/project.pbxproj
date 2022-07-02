@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC063EAD286A5B16002BB64F /* AUViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC063EAC286A5B16002BB64F /* AUViewWrapper.swift */; };
 		DC0DFCED2862993C0021DC1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD728626B5E009545FB /* ViewController.swift */; };
 		DC18DCD628626B5E009545FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD528626B5E009545FB /* AppDelegate.swift */; };
 		DC18DCDB28626B5E009545FB /* DSPTool_VI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC18DCD928626B5E009545FB /* DSPTool_VI.xcdatamodeld */; };
@@ -19,6 +20,11 @@
 		DC18DD4D286285D8009545FB /* AUFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC18DD47286285D8009545FB /* AUFramework.framework */; };
 		DC18DD4E286285D8009545FB /* AUFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC18DD47286285D8009545FB /* AUFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC18DD5628628680009545FB /* TemplateAudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */; };
+		DC29BE75286BD2F300CE188C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29BE74286BD2F300CE188C /* Style.swift */; };
+		DC29BE77286BDDD400CE188C /* AUViewWrapper.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC29BE76286BDDD400CE188C /* AUViewWrapper.xib */; };
+		DC29BE79286BF53200CE188C /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29BE78286BF53200CE188C /* DrawView.swift */; };
+		DC2BA56D286E29100050BDB4 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA56C286E29100050BDB4 /* ConnectionView.swift */; };
+		DC3301872863E6F700197F82 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3301862863E6F700197F82 /* EventHandler.swift */; };
 		DC89E97B28629B0100A529D7 /* TemplateAudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC18DD3728628549009545FB /* TemplateAudioUnitViewController.xib */; };
 		DC89E98028629C4100A529D7 /* TemplateDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DC18DD2F28628549009545FB /* TemplateDSPKernel.hpp */; };
 		DC89E98628629E2B00A529D7 /* TemplateAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18DD57286286A6009545FB /* TemplateAudioUnit.swift */; };
@@ -89,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC063EAC286A5B16002BB64F /* AUViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUViewWrapper.swift; sourceTree = "<group>"; };
 		DC18DCD228626B5E009545FB /* DSPTool_VI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSPTool_VI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC18DCD528626B5E009545FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC18DCD728626B5E009545FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +118,11 @@
 		DC18DD47286285D8009545FB /* AUFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AUFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC18DD49286285D8009545FB /* AUFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUFramework.h; sourceTree = "<group>"; };
 		DC18DD57286286A6009545FB /* TemplateAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAudioUnit.swift; sourceTree = "<group>"; };
+		DC29BE74286BD2F300CE188C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		DC29BE76286BDDD400CE188C /* AUViewWrapper.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AUViewWrapper.xib; sourceTree = "<group>"; };
+		DC29BE78286BF53200CE188C /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		DC2BA56C286E29100050BDB4 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		DC3301862863E6F700197F82 /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		DC89E9BD2862A2F800A529D7 /* GainStage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GainStage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC89E9CB2862A2F800A529D7 /* GainStageDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GainStageDSPKernelAdapter.h; sourceTree = "<group>"; };
 		DC89E9CC2862A2F800A529D7 /* GainStageDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GainStageDSPKernel.hpp; sourceTree = "<group>"; };
@@ -160,9 +172,9 @@
 		DC18DCC928626B5E009545FB = {
 			isa = PBXGroup;
 			children = (
+				DC18DCD428626B5E009545FB /* DSPTool_VI */,
 				DC89E9BE2862A2F800A529D7 /* GainStage */,
 				DC18DD2128628549009545FB /* Template */,
-				DC18DCD428626B5E009545FB /* DSPTool_VI */,
 				DC18DD48286285D8009545FB /* AUFramework */,
 				DC18DCD328626B5E009545FB /* Products */,
 			);
@@ -190,6 +202,12 @@
 				DC18DCE128626B60009545FB /* DSPTool_VI.entitlements */,
 				DC18DCD928626B5E009545FB /* DSPTool_VI.xcdatamodeld */,
 				DC18DCE728626B77009545FB /* measuringtape2.mp3 */,
+				DC3301862863E6F700197F82 /* EventHandler.swift */,
+				DC063EAC286A5B16002BB64F /* AUViewWrapper.swift */,
+				DC29BE76286BDDD400CE188C /* AUViewWrapper.xib */,
+				DC29BE74286BD2F300CE188C /* Style.swift */,
+				DC29BE78286BF53200CE188C /* DrawView.swift */,
+				DC2BA56C286E29100050BDB4 /* ConnectionView.swift */,
 			);
 			path = DSPTool_VI;
 			sourceTree = "<group>";
@@ -432,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC29BE77286BDDD400CE188C /* AUViewWrapper.xib in Resources */,
 				DC18DCE828626B77009545FB /* measuringtape2.mp3 in Resources */,
 				DC18DCDD28626B60009545FB /* Assets.xcassets in Resources */,
 				DC18DCE028626B60009545FB /* Main.storyboard in Resources */,
@@ -470,10 +489,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC29BE79286BF53200CE188C /* DrawView.swift in Sources */,
+				DC2BA56D286E29100050BDB4 /* ConnectionView.swift in Sources */,
 				DC0DFCED2862993C0021DC1D /* ViewController.swift in Sources */,
+				DC063EAD286A5B16002BB64F /* AUViewWrapper.swift in Sources */,
 				DC18DCD628626B5E009545FB /* AppDelegate.swift in Sources */,
 				DC18DCDB28626B5E009545FB /* DSPTool_VI.xcdatamodeld in Sources */,
 				DC18DCEA28626B8B009545FB /* AudioPlayer.swift in Sources */,
+				DC29BE75286BD2F300CE188C /* Style.swift in Sources */,
+				DC3301872863E6F700197F82 /* EventHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

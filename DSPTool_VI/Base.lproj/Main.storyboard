@@ -721,15 +721,15 @@
                                     <action selector="buttonPressed:" target="XfG-lQ-9wD" id="Pnf-57-AH7"/>
                                 </connections>
                             </button>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mz-xe-pgA">
-                                <rect key="frame" x="150" y="86" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="za8-Tj-1cG" customClass="ConnectionView" customModule="DSPTool_VI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </customView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="addEffectButton" destination="yjk-RD-VtC" id="8no-mJ-dx9"/>
-                        <outlet property="auContainer" destination="5mz-xe-pgA" id="gkY-BW-Njw"/>
+                        <outlet property="connectionView" destination="za8-Tj-1cG" id="TU3-DM-OrO"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -22,7 +22,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <slider horizontalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58O-pY-g9s">
-                            <rect key="frame" x="63" y="16" width="24" height="107"/>
+                            <rect key="frame" x="63" y="14" width="24" height="107"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="58O-pY-g9s" secondAttribute="height" multiplier="20:99" id="OcG-91-hjg"/>
                             </constraints>

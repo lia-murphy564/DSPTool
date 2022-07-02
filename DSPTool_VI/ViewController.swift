@@ -5,122 +5,87 @@
 //  Created by Amelia Murphy on 6/21/22.
 //
 
+import Foundation
 import Cocoa
 import AUFramework
 import AudioUnit
 import CoreGraphics
 import AppKit
+import AVFAudio
 
 class ViewController: NSViewController {
     
     private var audioPlayer: AudioPlayer!
-    private var pluginVC: TemplateAudioUnitViewController!
+//    private var pluginVC: TemplateAudioUnitViewController!
     private var gainVC: GainStageViewController!
+    
+    private var reverbAU: AVAudioUnitReverb!
+    
+    @IBOutlet weak var connectionView: ConnectionView!
     
     @IBOutlet weak var auContainer: NSView!
     
     @IBOutlet weak var addEffectButton: NSButton!
     
+    // array of audio unit controllers
+    private var audioUnitVCArr: NSMutableArray!
+    
     lazy var window: NSWindow = self.view.window!
-    var mouseLocation: NSPoint { NSEvent.mouseLocation }
-    var location: NSPoint { window.mouseLocationOutsideOfEventStream }
+//    var mouseLocation: NSPoint { NSEvent.mouseLocation }
+//    var location: NSPoint { window.mouseLocationOutsideOfEventStream }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = Bundle.main.url(forResource: "measuringtape2", withExtension: "mp3") else {
+        guard let audioUrl = Bundle.main.url(forResource: "measuringtape2", withExtension: "mp3") else {
             fatalError("can't create urls from resource")
         }
-        audioPlayer = AudioPlayer(url)
-        setupEventListeners()
-        auContainer = addPluginView()
+        audioPlayer = AudioPlayer(audioUrl)
+        
+        self.audioUnitVCArr = NSMutableArray()
+        
+        //setupEventListeners()
+
+        //auContainer = addPluginView() // default
         //connectAudioUnitWithPlayer()
         //audioPlayer.play()
-    }
-    
-    private func setupEventListeners() {
         
-        var diffX: CGFloat!
-        var diffY: CGFloat!
-        var isInBounds: Bool!
-        
-        NSEvent.addLocalMonitorForEvents(matching: .leftMouseDown) {
-            let color = CGColor(red: 0.4627, green: 0.8392, blue: 1.0, alpha: 1)
-            self.auContainer.wantsLayer = true
-            self.auContainer.layer?.backgroundColor = color
-            
-            
-            diffX = self.location.x - self.auContainer.frame.minX
-            diffY = self.location.y - self.auContainer.frame.minY
-            
-            if (self.checkMouseInBounds(frame: self.auContainer.frame)) {
-                isInBounds = true
-            }
-            else {
-                isInBounds = false
-            }
-            
-            return $0
-        }
-        
-        NSEvent.addLocalMonitorForEvents(matching: .leftMouseUp) {
-            let color = CGColor(red: 0.4627, green: 0.8392, blue: 1.0, alpha: 0)
-            self.auContainer.wantsLayer = true
-            self.auContainer.layer?.backgroundColor = color
-            return $0
-        }
-        
-        NSEvent.addLocalMonitorForEvents(matching: [.leftMouseDragged]) {
-            
-            let mX = self.location.x
-            let mY = self.location.y
-            
-            if (isInBounds) {
-                self.auContainer.setFrameOrigin(NSPoint(x: mX - diffX, y: mY - diffY))
-            }
-        
-            
-            return $0
-        }
-        
-        NSEvent.addLocalMonitorForEvents(matching: [.leftMouseDown, .leftMouseDragged]) {
-            
-            return $0
-        }
-    }
-    
-    private func checkMouseInBounds(frame: CGRect) -> Bool {
-        let mX = self.location.x
-        let mY = self.location.y
-        print(mX, " ", mY)
-        print("minX: ", frame.minX, " maxX: ", frame.maxX, " minY: ", frame.minY, " maxY: ", frame.maxY)
-        
-        if (mX > frame.minX && mX < frame.maxX && mY > frame.minY && mY < frame.maxY) {
-            print("true")
-            return true
-        }
-        else {
-            return false
-        }
-    }
 
-    private func addPluginView() -> NSView {
-        
-        // grab appex
+    }
+    
+
+    
+    private func addAudioUnit(auType: AUType) {
+
         let builtInPluginsURL = Bundle.main.builtInPlugInsURL
-        guard let pluginURL = builtInPluginsURL?.appendingPathComponent("GainStage.appex") else {
-            fatalError("cannot get plugin URL")
+        
+        switch (auType) {
+        case AUType.kGainStage:
+            
+            // get appex
+            guard let pluginURL = builtInPluginsURL?.appendingPathComponent("GainStage.appex") else {
+                fatalError("cannot get plugin URL")
+            }
+            let appExtensionBundle = Bundle(url: pluginURL)
+            
+            // add view controller to array
+          //  let auVc = GainStageViewController(nibName: "GainStageViewController", bundle:appExtensionBundle)//
+            //audioUnitVCArr.add(auVc)
+            
+           // let auViewWrapper = AUViewWrapper()
+            //auViewWrapper.addAudioUnit(auType: AUType.kGainStage)
+           // audioUnitVCArr.add(auViewWrapper)
+            
+            
+            
+            // instantiate view controller on main vc
+            //let auView = auVc.view
+            //auVc.view.frame = auContainer.bounds
+            //auContainer.addSubview(auVc.view)
+            
+            
+            // connect audio unit to the players
         }
-        let appExtensionBundle = Bundle(url: pluginURL)
-        
-        // get view controller
-        pluginVC = TemplateAudioUnitViewController(nibName: "TemplateAudioUnitViewController", bundle: appExtensionBundle)
-        gainVC = GainStageViewController(nibName: "GainStageViewController", bundle: appExtensionBundle)
-        
-        // set view controller's bounds for checking
-        let auView = gainVC.view
-        auView.frame = auContainer.bounds
-        auContainer.addSubview(auView)
-        return auContainer
     }
     
     private func connectAudioUnitWithPlayer() {
@@ -142,15 +107,25 @@ class ViewController: NSViewController {
         }
     
     @IBAction func buttonPressed(_ sender: NSButton) {
-        // spawn AU contanier
-        addPluginView()
         
+        let auWrapper = AUViewWrapper(frame: NSRect(x: self.window.contentView!.frame.minX, y: self.window.contentView!.frame.minY, width: 150, height: 150))
+        self.view.addSubview(auWrapper)
+        auWrapper.instantiateAudioUnit(auType: AUType.kGainStage)
+        auWrapper.setConnectionView(self.connectionView)
         
-       // mouseDownEvent = NSEvent.pressedMouseButtons
+        auWrapper.auViewID = audioUnitVCArr.count
+
+        audioUnitVCArr.add(auWrapper)
+
+        print("Number of AU: ", audioUnitVCArr.count)
         
-        //print(mouseDownEvent)
+
     }
+    
+
 
     
     
 }
+
+
